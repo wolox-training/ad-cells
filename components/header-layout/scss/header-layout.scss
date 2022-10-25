@@ -6,7 +6,7 @@
   position: fixed;
   width: 100%;
   z-index: 2;
-  
+
   .navbar-navigation {
     align-items: center;
     display: flex;
@@ -28,4 +28,3 @@
 .option-navigator {
   @include text-extra-large;
 }
-
