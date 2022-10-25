@@ -1,0 +1,26 @@
+@-webkit-keyframes displacement {
+  from {
+    right: 800px;
+  }
+  to {
+    transform: rotate(40deg);
+  }
+}
+@keyframes displacement {
+  from {
+    right: 800px;
+  }
+  to {
+    transform: rotate(40deg);
+  }
+}
+@-webkit-keyframes shift-line {
+  from {
+    width: 0;
+  }
+}
+@keyframes shift-line {
+  from {
+    width: 0;
+  }
+}/*# sourceMappingURL=animation.css.map */

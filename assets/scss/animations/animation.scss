@@ -1,0 +1,14 @@
+@keyframes displacement {
+  from {
+    right: 800px;
+  }
+  to {
+    transform: rotate(40deg);
+  }
+}
+
+@keyframes shift-line {
+  from {
+    width: 0;
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../assets/scss/reset-scss/equalizer.scss';
+@import '../../assets/scss/mixins/general';
+@import '../../assets/scss/mixins/text-weight';
+@import '../../assets/scss/mixins/text';
+@import '../../assets/scss/variables/colors/colors.scss';
+@import '../../assets/scss/variables/fonts/fonts.scss';
+@import '../../assets/scss/variables/sizes/sizes-fonts.scss';
+@import '../../assets/scss/variables/sizes/sizes-general.scss';
+@import '../../assets/scss/animations/animation.scss';
+@import '../../components/header-layout/scss/header-layout.scss';
+@import '../../components/input-search//scss/input-search.scss';
+@import '../../components/login/scss/login-element.scss';
+@import '../../components/book-list/scss/book-list.scss';
+@import '../../components/book-detail/scss/book-detail.scss';
+@import '../../components//item-book/scss/item-book.scss';
+
+body {
+  @include text-font-family;
+}
+
+.wrapper {
+  align-items: center;
+  background-color: $light-gray;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  height: 100vh;
+  justify-items: center;
+  padding: 0px 8px;
+}
