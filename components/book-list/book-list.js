@@ -21,6 +21,12 @@ class BookList extends LitElement {
     this._getFilterListDataBook();
   }
 
+  onClick(book) {
+    this.dispatchEvent(new CustomEvent('book-clicked', {
+      detail: book.id
+    }));
+  }
+
   render() {
     return html`
       <link rel="stylesheet" href="/public/app.css" />
@@ -31,6 +37,7 @@ class BookList extends LitElement {
         ${this.books.map(
           (book) => html`
             <item-book
+              @click=${() => {this.onClick(book)}}
               .idBook=${book.id}
               .titleBook=${book.book_title}
               .imageBook=${book.img}
