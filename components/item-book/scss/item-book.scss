@@ -1,0 +1,50 @@
+:host {
+  max-width: 202px;
+  margin: 0px auto;
+  width: 100%;
+}
+
+.card {
+  @include box-shadow-scroll-Xright-Ydown;
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 28px;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  .image-container-list {
+    height: 200px;
+    margin-bottom: 18px;
+    width: 100%;
+
+    .image-book-list {
+      height: 100%;
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+
+  .book-description {
+    display: flex;
+    flex-direction: column;
+
+    .title-description {
+      @include text-medium;
+      @include text-weight-bold;
+      margin-bottom: 10px;
+    }
+
+    .paragraph-description {
+      @include text-extra-small;
+      @include text-weight-300;
+      color: $dark-gray;
+      line-height: 20px;
+    }
+  }
+}

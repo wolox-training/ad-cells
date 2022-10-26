@@ -1,0 +1,30 @@
+.header-container {
+  @include box-shadow-scroll-X-Y-equal-value;
+  background-color: $light-white;
+  border-top: 6px solid $light-blue;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+
+  .navbar-navigation {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+
+    .logo-container {
+      height: 100%;
+
+      .logo-image {
+        height: inherit;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.option-navigator {
+  @include text-extra-large;
+}

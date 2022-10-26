@@ -1,0 +1,27 @@
+@mixin text-extra-small {
+  font-size: $size-xsm;
+}
+
+@mixin text-medium {
+  font-size: $size-md;
+}
+
+@mixin text-extra-large {
+  font-size: $size-xlg;
+}
+
+@mixin text-small {
+  font-size: $size-sm;
+}
+
+@mixin text-large {
+  font-size: $size-lg;
+}
+
+@mixin text-extra-extra-large {
+  font-size: $size-xxlg;
+}
+
+@mixin text-font-family {
+  font-family: $roboto;
+}

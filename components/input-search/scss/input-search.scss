@@ -1,0 +1,39 @@
+.container-search {
+  height: 100px;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-top: 150px;
+  text-align: center;
+  width: 100%;
+}
+
+.wrapper-input-search {
+  border: 2px solid $medium-gray;
+  border-radius: 5px;
+  background-color: $light-white;
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+  padding: 10px 15px;
+  width: 65%;
+
+  .input-search {
+    @include text-small;
+    color: $medium-gray;
+    height: 100%;
+    width: 100%;
+  }
+
+  &::after {
+    background: url('/assets/icons/icons8-búsqueda.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    height: 40px;
+    position: absolute;
+    right: 7px;
+    top: 3px;
+    width: 40px;
+  }
+}

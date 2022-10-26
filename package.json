@@ -1,0 +1,17 @@
+{
+  "name": "documents",
+  "version": "1.0.0",
+  "description": "Training of cells framework join to lit-element",
+  "main": "index.js",
+  "scripts": {
+    "start": "es-dev-server --app-index index.html --node-resolve --watch --open"
+  },
+  "author": "aducuara",
+  "license": "MIT",
+  "devDependencies": {
+    "es-dev-server": "^2.1.0"
+  },
+  "dependencies": {
+    "lit-element": "^3.2.2"
+  }
+}

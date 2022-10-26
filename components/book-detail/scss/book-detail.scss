@@ -1,0 +1,230 @@
+.card-container {
+  @include box-shadow-scroll-Xright-Ydown;
+  background-color: $light-white;
+  display: grid;
+  grid-template-columns: 10px auto 10px;
+  grid-template-rows: 1fr auto 1fr;
+  grid-row: 2;
+  height: 570px;
+  justify-items: center;
+  max-width: 336px;
+  padding: 4px 10px 14px;
+  width: 100%;
+
+  .title {
+    @include text-large;
+    align-self: center;
+    font-weight: bold;
+    grid-column: 2 / 3;
+  }
+
+  .subtitle {
+    @include text-medium;
+    align-self: end;
+    color: $dark-gray;
+    font-weight: bold;
+    grid-area: 3 / 2 / 4 / 3;
+  }
+
+  .detail {
+    grid-area: 4 / 2 / 5 / 3;
+    margin-top: 10px;
+
+    .information-paragraph {
+      @include text-extra-small;
+      @include text-weight-bold;
+      color: $dark-black;
+      line-height: 42px;
+    }
+
+    .hightlighted-paragraph {
+      @include text-extra-small;
+      color: $dark-gray;
+    }
+
+    &::before {
+      background-color: $light-green;
+      content: '';
+      display: block;
+      height: 4px;
+      width: 100%;
+    }
+  }
+}
+
+.image-container {
+  align-items: center;
+  grid-area: 2 / 1 / 2 / 4;
+  height: 298px;
+  margin: 0px 0px -20px;
+  position: relative;
+  width: 212px;
+
+  .img-book {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  &::before {
+    animation-name: displacement;
+    animation-duration: 4s;
+    background-image: url('/assets/img/badge.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: '';
+    height: calc($height-badge - $height-badge * 0.3);
+    max-width: calc($width-badge - $width-badge * 0.3);
+    position: absolute;
+    right: -2px;
+    transform: rotate(14deg);
+    top: -20px;
+    width: 100%;
+  }
+}
+
+.redirect-content {
+  align-items: center;
+  display: grid;
+  grid-row: 3;
+  grid-template-columns: repeat(2, 1fr);
+
+  &::before {
+    content: url('../assets/icons/back-arrow.png');
+    justify-self: center;
+  }
+
+  .redirect {
+    @include text-extra-large;
+  }
+}
+
+@media (min-width: $width-tablet) {
+  .wrapper {
+    grid-template-columns: 1fr auto 1fr;
+    padding: 0 8px;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(4, auto);
+    grid-column: 2 / 3;
+    margin-top: 30px;
+    max-width: 853px;
+    padding: 26px;
+    width: 100%;
+
+    .title {
+      @include text-extra-extra-large;
+      grid-area: 1 / 1 / 2 / 6;
+    }
+
+    .subtitle {
+      @include text-large;
+      align-self: start;
+      grid-area: 2 / 1 / 2 / 6;
+      margin-top: -10px;
+    }
+
+    .image-container {
+      grid-column: 1 / 2;
+      height: 368px;
+      margin-top: 56px;
+      width: 261px;
+
+      &::before {
+        height: $height-badge;
+        max-width: $width-badge;
+        width: 100%;
+      }
+    }
+
+    .detail {
+      align-self: center;
+      display: grid;
+      grid-column: auto;
+      grid-area: 2 / 2 / 2 / 3;
+      margin-left: 50px;
+
+      .information-paragraph,
+      .hightlighted-paragraph {
+        @include text-large;
+      }
+
+      .information-paragraph {
+        @include text-weight-bold;
+        line-height: 58px;
+      }
+
+      .hightlighted-paragraph {
+        @include text-weight-300;
+      }
+
+      &::before {
+        content: '';
+        display: none;
+      }
+    }
+  }
+
+  .redirect-content {
+    align-self: start;
+    grid-area: 2 / 2 / 2 / 2;
+    justify-self: start;
+  }
+}
+
+@media (min-width: $width-laptop) {
+  .card-container {
+    grid-template-areas:
+      'img title subtitle'
+      'img detail detail'
+      'img detail detail';
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 416px;
+    max-width: 853px;
+    width: 100%;
+
+    .title {
+      align-self: start;
+      grid-area: title;
+      justify-self: end;
+      margin-right: 10px;
+    }
+
+    .subtitle {
+      align-self: start;
+      grid-area: subtitle;
+      justify-self: start;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .image-container {
+      grid-area: img;
+      margin: 0;
+    }
+
+    .detail {
+      align-self: start;
+      grid-area: detail;
+      margin: -36px 0px 0px -80px;
+
+      &::before {
+        animation-name: shift-line;
+        animation-duration: 4s;
+        background-color: $light-green;
+        content: '';
+        display: block;
+        height: 4px;
+        margin-bottom: 20px;
+      }
+
+      .information-paragraph,
+      .hightlighted-paragraph {
+        @include text-small;
+      }
+    }
+  }
+}

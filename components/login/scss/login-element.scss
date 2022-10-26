@@ -1,0 +1,69 @@
+.btn {
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn,
+.label-control {
+  @include text-medium;
+  color: $dark-black;
+}
+
+.login-container {
+  @include flex-column;
+  background-color: $light-white;
+
+  .form-container {
+    align-items: center;
+    border-top: 8px solid $light-blue;
+    background-color: $light-gray;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    max-width: 300px;
+    padding: 20px 26px;
+    width: 100%;
+
+    .label-control {
+      align-self: flex-start;
+      margin-top: 16px;
+    }
+
+    .input-control {
+      border-color: $light-white;
+      border-radius: 5px;
+      height: 32px;
+      margin-top: 10px;
+      padding: 0 12px;
+      width: 100%;
+    }
+
+    .btn-login-container {
+      width: 100%;
+
+      &::after {
+        background-color: $medium-gray;
+        content: '';
+        display: block;
+        height: 2px;
+        margin: 10px 0;
+      }
+    }
+
+    .btn-login {
+      background-color: $light-green;
+      color: $light-white;
+      margin-top: 22px;
+    }
+
+    .btn-signup {
+      border: 2px solid $light-green;
+      color: $light-green;
+      margin-bottom: 20px;
+    }
+  }
+}
